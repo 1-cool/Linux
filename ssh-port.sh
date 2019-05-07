@@ -69,7 +69,7 @@ Set_port(){
 		#echo -e "请输入新的SSH端口 [1-65535]"
 		#read -e -p "(输入为空则取消):" new_port
 		#将SSH端口改为2233
-    		new_port=22
+    		new_port=2233
 		[[ -z "${new_port}" ]] && echo "取消..." && exit 1
 		echo $((${new_port}+0)) &>/dev/null
 		if [[ $? -eq 0 ]]; then
