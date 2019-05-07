@@ -61,8 +61,8 @@ Read_config(){
 	fi
 }
 Set_port(){
-	while true
-		do
+	#while true
+		#do
 		echo -e "\n旧SSH端口：${Green_font_prefix}[${port}]${Font_color_suffix}"
 		#echo -e "请输入新的SSH端口 [1-65535]"
 		#read -e -p "(输入为空则取消):" new_port
@@ -73,7 +73,7 @@ Set_port(){
 		if [[ $? -eq 0 ]]; then
 			if [[ ${new_port} -ge 1 ]] && [[ ${new_port} -le 65535 ]]; then
 				if [[ ${new_port} == ${port} ]]; then
-					echo -e "输入错误, 新端口与旧端口一致。"
+					echo -e "输入错误, 新端口与旧端口一致。" && exit 1
 				else
 					echo && echo "============================="
 					echo -e "	新端口 : ${Red_background_prefix} ${new_port} ${Font_color_suffix}"
@@ -86,7 +86,7 @@ Set_port(){
 		else
 			echo -e "输入错误, 请输入正确的端口。"
 		fi
-	done
+	#done
 }
 choose_the_way(){
 	echo -e "请选择SSH端口修改方式：
