@@ -68,7 +68,8 @@ Set_port(){
 		echo -e "\n旧SSH端口：${Green_font_prefix}[${port}]${Font_color_suffix}"
 		#echo -e "请输入新的SSH端口 [1-65535]"
 		#read -e -p "(输入为空则取消):" new_port
-    		new_port = 22
+		#将SSH端口改为2233
+    		new_port=22
 		[[ -z "${new_port}" ]] && echo "取消..." && exit 1
 		echo $((${new_port}+0)) &>/dev/null
 		if [[ $? -eq 0 ]]; then
@@ -97,7 +98,8 @@ choose_the_way(){
  如果不懂请选 ${Green_font_prefix}[2. 保守修改]${Font_color_suffix}，避免因为未知问题而导致修改后无法通过 新端口和旧端口 链接服务器！\n
  ${over_text}\n"
 	#read -e -p "(默认: 2. 保守修改):" choose_the_way_num
-	choose_the_way_num = 1
+	#使用直接修改的方法
+	choose_the_way_num=1
 	[[ -z "${choose_the_way_num}" ]] && choose_the_way_num="2"
 	if [[ ${choose_the_way_num} == "1" ]]; then
 		cp -f "${CONF}" "/etc/ssh/sshd_config.bak"
