@@ -96,7 +96,7 @@ choose_the_way(){
  如果不懂请选 ${Green_font_prefix}[2. 保守修改]${Font_color_suffix}，避免因为未知问题而导致修改后无法通过 新端口和旧端口 链接服务器！\n
  ${over_text}\n"
 	#read -e -p "(默认: 2. 保守修改):" choose_the_way_num
-	echo "使用直接修改的方法"
+	echo "使用${Green_font_prefix}[1.直接修改]${Font_color_suffix}的方法"
 	choose_the_way_num=1
 	[[ -z "${choose_the_way_num}" ]] && choose_the_way_num="2"
 	if [[ ${choose_the_way_num} == "1" ]]; then
