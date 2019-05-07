@@ -3,11 +3,9 @@ PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 export PATH
 
 #=================================================
-#	System Required: Debian/Ubuntu
-#	Description: SSH modify port
+#	支持的系统: Debian/Ubuntu
+#	描述: 更改SSH端口为2233
 #	Version: 1.0.0
-#	Author: Toyo
-#	Blog: https://doub.io/linux-jc11/
 #=================================================
 
 sh_ver="1.0.0"
