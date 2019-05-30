@@ -5,6 +5,7 @@
 #!/bin/bash
 
 red='\033[0;31m'
+plain='\033[0m'
 
 #检查权限
 [[ $EUID -ne 0 ]] && echo -e "[${red}Error${plain}] 需要root权限执行此脚本!" && exit 1
