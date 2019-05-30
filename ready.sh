@@ -5,7 +5,7 @@
 #!/bin/bash
 
 #检查权限
-[[ $EUID -ne 0 ]] && echo -e "[${red}Error${plain}] This script must be run as root!" && exit 1
+[[ $EUID -ne 0 ]] && echo -e "[${red}Error${plain}] 需要root权限执行此脚本!" && exit 1
 
 #准备SS脚本
 wget https://raw.githubusercontent.com/1-cool/Linux/master/shadowsocks-all.sh
