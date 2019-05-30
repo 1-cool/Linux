@@ -7,7 +7,7 @@ HLIST=$(cat ipadds.txt)
 #获取IP地址数量
 total=$(wc -l ipadds.txt | awk '{print $1}')
 #规定最大的延迟
-mintime=600.000
+mintime=400.000
 #低于最大延迟的IP数
 GOOD=0
 #安装所需支持
