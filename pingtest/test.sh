@@ -7,7 +7,7 @@ HLIST=$(cat ipadds.txt)
 #获取IP地址数量
 total=$(wc -l ipadds.txt | awk '{print $1}')
 #规定最大的延迟
-mintime=400.000
+maxtime=400.000
 #低于最大延迟的IP数
 GOOD=0
 #安装所需支持
@@ -17,7 +17,7 @@ do
         #获取延迟
         TIME=$(ping -c 1 -i 0.2 -W 3 ${IP} | awk '{print $7}' | awk '{split($0,b,"=");print b[2]}')
         #判断延迟是否小于规定的最大延迟
-        if [[ -n ${TIME} ]] && [[ $(echo "${TIME} < ${mintime}"|bc) -eq 1 ]];
+        if [[ -n ${TIME} ]] && [[ $(echo "${TIME} < ${maxtime}"|bc) -eq 1 ]];
         then
                 let "GOOD=GOOD+1"
         fi
