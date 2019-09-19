@@ -20,4 +20,4 @@ chmod +x tcp.sh
 wget http://download.bt.cn/install/install-ubuntu.sh
 
 #下载IP地址文件
-wget https://raw.githubusercontent.com/1-cool/Linux/master/pingtest/ipadds.txt
+#wget https://raw.githubusercontent.com/1-cool/Linux/master/pingtest/ipadds.txt
