@@ -17,7 +17,7 @@ chmod +x tcp.sh
 #chmod +x ssh-port.sh
 
 #准备宝塔安装脚本
-wget http://download.bt.cn/install/install-ubuntu.sh
+http://download.bt.cn/install/install-ubuntu_6.0.sh
 
 #下载IP地址文件
 #wget https://raw.githubusercontent.com/1-cool/Linux/master/pingtest/ipadds.txt
