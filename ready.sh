@@ -8,6 +8,9 @@
 wget https://raw.githubusercontent.com/1-cool/Linux/master/shadowsocks-all.sh
 chmod +x shadowsocks-all.sh
 
+#准备v2ray安装脚本
+wget https://git.io/v2ray.sh
+
 #准备网络加速安装脚本
 wget https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh
 chmod +x tcp.sh
