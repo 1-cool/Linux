@@ -5,8 +5,8 @@
 #!/bin/bash
 
 #准备SS/SSR安装脚本
-wget https://raw.githubusercontent.com/1-cool/Linux/master/shadowsocks-all.sh
-chmod +x shadowsocks-all.sh
+#wget https://raw.githubusercontent.com/1-cool/Linux/master/shadowsocks-all.sh
+#chmod +x shadowsocks-all.sh
 
 #准备v2ray安装脚本
 wget https://git.io/v2ray.sh
