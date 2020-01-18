@@ -1,6 +1,6 @@
 #!/bin/sh
 # 禁止SSH密码登录
-sed 's/#PasswordAuthentication yes/PasswordAuthentication no/g' /etc/ssh/sshd_config
+sed -i 's/#PasswordAuthentication yes/PasswordAuthentication no/g' /etc/ssh/sshd_config
 systemctl restart sshd.service
 # 下载准备脚本
 cd /root/
