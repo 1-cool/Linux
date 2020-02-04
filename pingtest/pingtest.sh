@@ -13,25 +13,25 @@ maxtime=400.000
 GOOD=0
 #安装所需支持
 sudo apt install -y bc sendemail libnet-ssleay-perl libio-socket-ssl-perl
-for IP in ${HLIST}
+for IP in $HLIST
 do
         #获取延迟
-        TIME=$(ping -c 1 -i 0.2 -W 3 ${IP} | awk '{print $7}' | awk '{split($0,b,"=");print b[2]}')
+        TIME=$(ping -c 1 -i 0.2 -W 3 $IP | awk '{print $7}' | awk '{split($0,b,"=");print b[2]}')
         #判断延迟是否小于规定的最大延迟
-        if [[ -n ${TIME} ]] && [[ $(echo "${TIME} < ${maxtime}"|bc) -eq 1 ]];
+        if [[ -n $TIME ]] && [[ $(echo "$TIME < $maxtime"|bc) -eq 1 ]];
         then
                 let "GOOD=GOOD+1"
         fi
 done
-echo "测试主机共${total}台"
+echo "测试主机共$total台"
 #取总IP数的1/5
 #let "total=total/5"
-echo "现能良好连接的主机${GOOD}台"
+echo "现能良好连接的主机$GOOD台"
 #判断好的延迟数目是否低于总IP的1/5
-if [ ${GOOD} -lt ${total} ];
+if [ $GOOD -lt $total ];
 then
         echo "Bad"
-        sendemail -l email.log -f "****@qq.com" -u "subject" -t "****@qq.com" -s "smtp.qq.com:587" -o tls=yes -xu "xxx@qq.com" -xp "password" -m "总共${total}台主机,现在能良好连接主机${GOOD}台"
+        sendemail -l email.log -f "****@qq.com" -u "subject" -t "****@qq.com" -s "smtp.qq.com:587" -o tls=yes -xu "xxx@qq.com" -xp "password" -m "总共$total台主机,现在能良好连接主机$GOOD台"
         # -l 保存日志到email.log文件
         # -f 发生邮件的邮箱地址
         # -u 邮件主题
