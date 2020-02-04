@@ -1,3 +1,6 @@
+############################################################################
+#                             查看v2ray连接列表
+############################################################################
 #!/bin/bash
 port=$(grep \"port /etc/v2ray/config.json | tr -cd "[0-9]")
-lsof -i -n -P | egrep ':${port}.+ESTABLISHED'
+lsof -i -n -P | grep ESTABLISHED | grep ${port}
