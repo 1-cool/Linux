@@ -25,3 +25,6 @@ wget http://download.bt.cn/install/install-ubuntu_6.0.sh
 
 #下载IP地址文件
 #wget https://raw.githubusercontent.com/1-cool/Linux/master/pingtest/ipadds.txt
+
+#查看v2ray连接列表脚本
+#wget https://raw.githubusercontent.com/1-cool/Linux/master/view-connections.sh
