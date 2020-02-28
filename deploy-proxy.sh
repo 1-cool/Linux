@@ -6,6 +6,12 @@ red='\e[91m'
 none='\e[0m'
 #root
 [[ $(id -u) != 0 ]] && echo -e "\n ${red}请使用 root 用户运行${none} \n" && exit 1
+cd /root
+#init config
+wget https://raw.githubusercontent.com/1-cool/Linux/master/initconfig.sh
+chmod +x initconfig.sh
+./initconfig.sh
+rm -rf initconfig.sh
 #download netspeed
 wget https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh
 chmod +x tcp.sh
