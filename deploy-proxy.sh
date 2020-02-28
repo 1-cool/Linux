@@ -6,6 +6,9 @@ red='\e[91m'
 none='\e[0m'
 #root
 [[ $(id -u) != 0 ]] && echo -e "\n ${red}请使用 root 用户运行${none} \n" && exit 1
+#download netspeed
+wget https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh
+chmod +x tcp.sh
 #download and install v2ray
 wget https://raw.githubusercontent.com/1-cool/Linux/master/v2ray.sh
 chmod +x v2ray.sh
@@ -26,3 +29,6 @@ hash
 put link.txt
 bye
 EOF
+#download view-connections
+wget https://raw.githubusercontent.com/1-cool/Linux/master/view-connections.sh
+chmod +x view-connections.sh
