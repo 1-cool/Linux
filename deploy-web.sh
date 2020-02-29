@@ -8,7 +8,7 @@
 wget https://raw.githubusercontent.com/1-cool/Linux/master/initconfig.sh
 chmod +x initconfig.sh
 ./initconfig.sh
-rm -rf initconfig.sh
+rm initconfig.sh
 #准备网络加速安装脚本
 wget https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh
 chmod +x tcp.sh

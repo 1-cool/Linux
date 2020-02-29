@@ -11,7 +11,7 @@ cd /root
 wget https://raw.githubusercontent.com/1-cool/Linux/master/initconfig.sh
 chmod +x initconfig.sh
 ./initconfig.sh
-rm -rf initconfig.sh
+rm initconfig.sh
 #download netspeed
 wget https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh
 chmod +x tcp.sh
