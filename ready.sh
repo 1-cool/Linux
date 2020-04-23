@@ -8,9 +8,8 @@
 #wget https://raw.githubusercontent.com/1-cool/Linux/master/shadowsocks-all.sh
 #chmod +x shadowsocks-all.sh
 
-#准备v2ray安装脚本
-wget https://git.io/v2ray.sh
-chmod +x v2ray.sh
+#安装v2ray
+source <(curl -sL https://multi.netlify.app/v2ray.sh) --zh
 
 #准备网络加速安装脚本
 wget https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh
