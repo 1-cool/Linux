@@ -9,7 +9,7 @@
 #chmod +x shadowsocks-all.sh
 
 #安装v2ray
-source <(curl -sL https://multi.netlify.app/v2ray.sh) --zh
+#source <(curl -sL https://multi.netlify.app/v2ray.sh) --zh
 
 #准备网络加速安装脚本
 wget https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh
