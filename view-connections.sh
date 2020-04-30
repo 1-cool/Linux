@@ -12,10 +12,7 @@ then
 else
     for IP in ${LIST}
     do
-        #显示连接v2ray的IP
-        echo ${IP}
-        #查询IP归属地
+        #查询IP及归属地
         curl https://cip.cc/${IP}
-        echo -e '\n'
     done
 fi
