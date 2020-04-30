@@ -18,6 +18,6 @@ else
     for IP in ${LIST}
     do
         #查询IP归属地
-        curl https://ip.cn/index.php?ip=${IP}
+        curl https://freeapi.ipip.net/${IP}
     done
 fi
