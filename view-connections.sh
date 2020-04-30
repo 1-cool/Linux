@@ -15,7 +15,7 @@ else
         #显示连接v2ray的IP
         echo ${IP}
         #查询IP归属地
-        curl https://freeapi.ipip.net/${IP}
-        echo ''
+        curl https://cip.cc/${IP}
+        echo -e '\n'
     done
 fi
