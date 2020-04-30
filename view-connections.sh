@@ -14,9 +14,6 @@ else
     do
         #显示连接v2ray的IP
         echo ${IP}
-    done
-    for IP in ${LIST}
-    do
         #查询IP归属地
         curl https://freeapi.ipip.net/${IP}
         echo ''
