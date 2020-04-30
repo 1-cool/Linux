@@ -19,5 +19,6 @@ else
     do
         #查询IP归属地
         curl https://freeapi.ipip.net/${IP}
+        echo ''
     done
 fi
