@@ -25,3 +25,7 @@ wget http://download.bt.cn/install/install-ubuntu_6.0.sh
 
 #查看v2ray连接列表脚本
 wget https://raw.githubusercontent.com/1-cool/Linux/master/view-connections.sh
+
+#生成订阅
+wget https://raw.githubusercontent.com/1-cool/Linux/master/updatelink.sh
+chmod +x updatelink.sh

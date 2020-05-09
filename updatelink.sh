@@ -5,4 +5,4 @@ echo -e "${vmess}\n"
 #base64 encoding
 link=$(echo -n "${vmess}" | base64 -w 0)
 echo -e "${link}\n"
-echo ${link} > /www/wwwroot/disk/link/link.txt
+#echo ${link} > /www/wwwroot/disk/link/link.txt
