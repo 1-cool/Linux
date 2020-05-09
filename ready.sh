@@ -9,8 +9,10 @@
 #chmod +x shadowsocks-all.sh
 
 #v2ray
-wget https://git.io/v2ray.sh
+#wget https://git.io/v2ray.sh
+wget https://raw.githubusercontent.com/1-cool/Linux/master/v2ray.sh
 chmod +x v2ray.sh
+./v2ray.sh
 
 #网络加速安装脚本
 wget https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh
@@ -27,5 +29,5 @@ wget http://download.bt.cn/install/install-ubuntu_6.0.sh
 wget https://raw.githubusercontent.com/1-cool/Linux/master/view-connections.sh
 
 #生成订阅
-wget https://raw.githubusercontent.com/1-cool/Linux/master/updatelink.sh
-chmod +x updatelink.sh
+#wget https://raw.githubusercontent.com/1-cool/Linux/master/updatelink.sh
+#chmod +x updatelink.sh

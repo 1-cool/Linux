@@ -5,4 +5,13 @@ echo -e "${vmess}\n"
 #base64 encoding
 link=$(echo -n "${vmess}" | base64 -w 0)
 echo -e "${link}\n"
-#echo ${link} > /www/wwwroot/disk/link/link.txt
+echo ${link} > link.txt
+#install ftp
+apt install -y ftp
+#ftp upload
+ftp -n 192.168.1.1<<EOF
+user ftpname ftppass
+hash
+put link.txt
+bye
+EOF
