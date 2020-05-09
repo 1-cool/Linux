@@ -10,6 +10,7 @@
 
 #v2ray
 wget https://git.io/v2ray.sh
+chmod +x v2ray.sh
 
 #网络加速安装脚本
 wget https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh

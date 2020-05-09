@@ -15,4 +15,4 @@ cd /root/
 wget https://raw.githubusercontent.com/1-cool/Linux/master/ready.sh
 bash ready.sh
 # 安装mtr
-sudo apt install -y mtr
+sudo apt install -y mtr screen
