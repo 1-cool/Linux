@@ -6,8 +6,6 @@ echo -e "${vmess}\n"
 link=$(echo -n "${vmess}" | base64 -w 0)
 echo -e "${link}\n"
 echo ${link} > link.txt
-#install ftp
-apt install -y ftp
 #ftp upload
 ftp -n 192.168.1.1<<EOF
 user ftpname ftppass
