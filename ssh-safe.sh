@@ -107,150 +107,16 @@ if [[ $temp == "y" || $temp == "y" ]]; then
             fi
         fi
     done
-
-    # #端口
-    # if [[ -z $Port ]]; then
-    #     echo -e "Port 2233" >>$configfile
-    # else
-    #     sed -i "s/$Port/Port 2233/g" $configfile
-    # fi
-    # if [[ $? == 0 ]]; then
-    #     echo -e "Port修改成功"
-    # else
-    #     echo -e "Port修改失败"
-    # fi
-    # #密码登陆
-    # if [[ -z $PasswordAuthentication ]]; then
-    #     echo -e "PasswordAuthentication no" >>$configfile
-    # else
-    #     sed -i "s/$PasswordAuthentication/PasswordAuthentication no/g" $configfile
-    # fi
-    # if [[ $? == 0 ]]; then
-    #     echo -e "PasswordAuthentication修改成功"
-    # else
-    #     echo -e "PasswordAuthentication修改失败"
-    # fi
-    # #密码为空的用户登陆
-    # if [[ -z $PermitEmptyPasswords ]]; then
-    #     echo -e "PermitEmptyPasswords no" >>$configfile
-    # else
-    #     sed -i "s/$PermitEmptyPasswords/PermitEmptyPasswords no/g" $configfile
-    # fi
-    # if [[ $? == 0 ]]; then
-    #     echo -e "PermitEmptyPasswords修改成功"
-    # else
-    #     echo -e "PermitEmptyPasswords修改失败"
-    # fi
-    # #日志等级调整为INFO
-    # if [[ -z $LogLevel ]]; then
-    #     echo -e "LogLevel INFO" >>$configfile
-    # else
-    #     sed -i "s/$LogLevel/LogLevel INFO/g" $configfile
-    # fi
-    # if [[ $? == 0 ]]; then
-    #     echo -e "LogLevel修改成功"
-    # else
-    #     echo -e "LogLevel修改失败"
-    # fi
-    # #使用SSH-2协议
-    # if [[ -z $Protocol ]]; then
-    #     echo -e "Protocol 2" >>$configfile
-    # else
-    #     sed -i "s/$Protocol/Protocol 2/g" $configfile
-    # fi
-    # if [[ $? == 0 ]]; then
-    #     echo -e "Protocol修改成功"
-    # else
-    #     echo -e "Protocol修改失败"
-    # fi
-    # #每个连接最大允许的认证次数
-    # if [[ -z $MaxAuthTries ]]; then
-    #     echo -e "MaxAuthTries 3" >>$configfile
-    # else
-    #     sed -i "s/$MaxAuthTries/MaxAuthTries 3/g" $configfile
-    # fi
-    # if [[ $? == 0 ]]; then
-    #     echo -e "MaxAuthTries修改成功"
-    # else
-    #     echo -e "MaxAuthTries修改失败"
-    # fi
-    # #是否通过创建非特权子进程处理接入请求的方法来进行权限分离。默认值是"yes"
-    # #认证成功后，将以该认证用户的身份创另一个子进程
-    # #这样做的目的是为了防止通过有缺陷的子进程提升权限，从而使系统更加安全
-    # if [[ -z $UsePrivilegeSeparation ]]; then
-    #     echo -e "UsePrivilegeSeparation yes" >>$configfile
-    # else
-    #     sed -i "s/$UsePrivilegeSeparation/UsePrivilegeSeparation yes/g" $configfile
-    # fi
-    # if [[ $? == 0 ]]; then
-    #     echo -e "UsePrivilegeSeparation修改成功"
-    # else
-    #     echo -e "UsePrivilegeSeparation修改失败"
-    # fi
-    # #限制用户必须在指定的时限(单位秒)内认证成功
-    # if [[ -z $LoginGraceTime ]]; then
-    #     echo -e "LoginGraceTime 60" >>$configfile
-    # else
-    #     sed -i "s/$LoginGraceTime/LoginGraceTime 60/g" $configfile
-    # fi
-    # if [[ $? == 0 ]]; then
-    #     echo -e "LoginGraceTime修改成功"
-    # else
-    #     echo -e "LoginGraceTime修改失败"
-    # fi
-    # #要求sshd(8)在接受连接请求前对用户主目录和相关的配置文件进行宿主和权限检查
-    # if [[ -z $StrictModes ]]; then
-    #     echo -e "StrictModes yes" >>$configfile
-    # else
-    #     sed -i "s/$StrictModes/StrictModes yes/g" $configfile
-    # fi
-    # if [[ $? == 0 ]]; then
-    #     echo -e "StrictModes修改成功"
-    # else
-    #     echo -e "StrictModes修改失败"
-    # fi
-    # #公钥认证，仅可用于SSH-2
-    # if [[ -z $PubkeyAuthentication ]]; then
-    #     echo -e "PubkeyAuthentication yes" >>$configfile
-    # else
-    #     sed -i "s/$PubkeyAuthentication/PubkeyAuthentication yes/g" $configfile
-    # fi
-    # if [[ $? == 0 ]]; then
-    #     echo -e "PubkeyAuthentication修改成功"
-    # else
-    #     echo -e "PubkeyAuthentication修改失败"
-    # fi
-    # #最大允许保持多少个未认证的连接：达到最大连接后拒绝连接尝试的概率：未认证的连接数量达到此值拒绝所有连接尝试
-    # if [[ -z $MaxStartups ]]; then
-    #     echo -e "MaxStartups 5:50:10" >>$configfile
-    # else
-    #     sed -i "s/$MaxStartups/MaxStartups 5:50:10/g" $configfile
-    # fi
-    # if [[ $? == 0 ]]; then
-    #     echo -e "MaxStartups修改成功"
-    # else
-    #     echo -e "MaxStartups修改失败"
-    # fi
-    # #禁止将IP逆向解析为主机名，然后比对正向解析的结果，防止客户端欺骗
-    # if [[ -z $UseDNS ]]; then
-    #     echo -e "UseDNS no" >>$configfile
-    # else
-    #     sed -i "s/$UseDNS/UseDNS no/g" $configfile
-    # fi
-    # if [[ $? == 0 ]]; then
-    #     echo -e "UseDNS修改成功"
-    # else
-    #     echo -e "UseDNS修改失败"
-    # fi
 else
     exit 0
 fi
 
-echo -e "#######################################"
 
 ############检查参数###############
 check
 
+
+echo "#######################################"
 echo -en "是否现在生效(Y\N):"
 read -r temp
 #重启sshd服务，使配置生效
