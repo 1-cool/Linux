@@ -9,8 +9,7 @@ red='\e[31m'
 reset='\e[0m'
 
 #sshd配置文件位置
-# configfile=/etc/ssh/sshd_config
-configfile=/tmp/sshd_config
+configfile=/etc/ssh/sshd_config
 
 #检查参数的函数
 function check() {
