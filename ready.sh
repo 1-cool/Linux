@@ -1,8 +1,9 @@
+#!/bin/bash
 ######################################################################
 #                            准备Linux安装脚本
 ######################################################################
 
-#!/bin/bash
+
 
 #SS/SSR安装脚本
 #wget https://raw.githubusercontent.com/1-cool/Linux/master/shadowsocks-all.sh

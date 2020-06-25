@@ -1,8 +1,9 @@
+#!/bin/sh
 ######################################################################################################
 #                                        系统：debian
 ######################################################################################################
 
-#!/bin/sh
+
 # 禁止SSH密码登录
 sed -i 's/#PasswordAuthentication yes/PasswordAuthentication no/g' /etc/ssh/sshd_config
 sed -i 's/#PermitEmptyPasswords no/PermitEmptyPasswords no/g' /etc/ssh/sshd_config
