@@ -8,8 +8,8 @@ PCAP_DIR="${SCRIPT_DIR}/pcap"
 # 配置参数
 INTERFACE="eth0"
 TARGET_IP="192.168.0.50"
-DURATION="1200"  # 每个抓包会话持续时间（秒）
-file_size="20"  # 每个抓包文件大小（MB）
+DURATION="600"  # 每个抓包会话持续时间（秒）
+# file_size="20"  # 每个抓包文件大小（MB）
 PID_FILE="${PCAP_DIR}/tcpdump_daemon.pid"
 LOG_FILE="${PCAP_DIR}/tcpdump_daemon.log"
 CURRENT_PID_FILE="${PCAP_DIR}/tcpdump_current.pid"
@@ -37,15 +37,14 @@ check_running() {
 
 # 启动抓包进程
 start_capture() {
-    timestamp=$(date +"%Y%m%d_%H%M%S")
-    output_file="${PCAP_DIR}/capture_${timestamp}.pcap"
+    output_file="${PCAP_DIR}/capture_%Y%m%d_%H%M%S.pcap"
     
     log "启动抓包进程 - 接口: $INTERFACE, 目标IP: $TARGET_IP"
     
     # 使用相对路径启动tcpdump，按时间周期分割，移除了-W参数不限制文件总数
-    # tcpdump -i "$INTERFACE" -w "$output_file" -G "$DURATION" host "$TARGET_IP" &
-    # 按文件大小分割
-    tcpdump -i "$INTERFACE" -w "$output_file" -C "$file_size" host "$TARGET_IP" -Z root &
+    tcpdump -i "$INTERFACE" -w "$output_file" -G "$DURATION" host "$TARGET_IP" &
+    # 按文件大小分割,文件名固定不能设置格式，暂时弃用
+    # tcpdump -i "$INTERFACE" -w "$output_file" -C "$file_size" host "$TARGET_IP" -Z root &
     
     tcpdump_pid=$!
     echo "$tcpdump_pid" > "$CURRENT_PID_FILE"
