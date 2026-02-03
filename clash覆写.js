@@ -10489,7 +10489,7 @@ function main(config) {
     {
       // ...groupBaseOption,
       "name": "🚀 手动切换",
-      "type": "fallback",
+      "type": "select",
       "include-all": true
     },
     // {
