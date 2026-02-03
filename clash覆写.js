@@ -16,7 +16,12 @@ const foreignNameservers = [
 // DNS配置
 const dnsConfig = {
   "enable": true,
-  "listen": "0.0.0.0:1053",
+  "prefer-h3": false,
+  "ipv6-timeout": 100,
+  "use-hosts": true,
+  "use-system-hosts": true,
+  "respect-rules": false,
+  "listen": "",
   "ipv6": true,
   "use-system-hosts": false,
   "cache-algorithm": "arc",
