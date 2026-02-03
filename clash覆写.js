@@ -10446,7 +10446,7 @@ const rules = [
   "GEOIP,CN,🎯 全球直连",
   "MATCH,🐟 漏网之鱼"
 ];
-代理组通用配置
+// 代理组通用配置
 const groupBaseOption = {
   "interval": 300,
   "timeout": 3000,
