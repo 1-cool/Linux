@@ -10446,7 +10446,7 @@ const rules = [
   "GEOIP,CN,🎯 全球直连",
   "MATCH,🐟 漏网之鱼"
 ];
-// 代理组通用配置
+代理组通用配置
 const groupBaseOption = {
   "interval": 300,
   "timeout": 3000,
@@ -10554,82 +10554,70 @@ function main(config) {
       "include-all": true
     },
     {
-      ...groupBaseOption,
       "name": "🌏 国内媒体",
       "type": "select",
       "proxies": ["🚀 节点选择", "♻️ 自动选择", "🚀 手动切换", "🎯 全球直连"],
       "include-all": true
     },
     {
-      ...groupBaseOption,
       "name": "📢 谷歌FCM",
       "type": "select",
       "proxies": ["🚀 节点选择", "♻️ 自动选择", "🚀 手动切换", "🎯 全球直连"],
       "include-all": true
     },
     {
-      ...groupBaseOption,
       "name": "Ⓜ️ 微软Bing",
       "type": "select",
       "proxies": ["🚀 节点选择", "♻️ 自动选择", "🚀 手动切换", "🎯 全球直连"],
       "include-all": true
     },
     {
-      ...groupBaseOption,
       "name": "Ⓜ️ 微软云盘",
       "type": "select",
       "proxies": ["🚀 节点选择", "♻️ 自动选择", "🚀 手动切换", "🎯 全球直连"],
       "include-all": true
     },
     {
-      ...groupBaseOption,
       "name": "Ⓜ️ 微软服务",
       "type": "select",
       "proxies": ["🚀 节点选择", "♻️ 自动选择", "🚀 手动切换", "🎯 全球直连"],
       "include-all": true
     },
     {
-      ...groupBaseOption,
       "name": "🍎 苹果服务",
       "type": "select",
       "proxies": ["🚀 节点选择", "♻️ 自动选择", "🚀 手动切换", "🎯 全球直连"],
       "include-all": true
     },
     {
-      ...groupBaseOption,
       "name": "🎮 游戏平台",
       "type": "select",
       "proxies": ["🚀 节点选择", "♻️ 自动选择", "🚀 手动切换", "🎯 全球直连"],
       "include-all": true
     },
     {
-      ...groupBaseOption,
       "name": "🎶 网易音乐",
       "type": "select",
       "proxies": ["🚀 节点选择", "♻️ 自动选择", "🚀 手动切换", "🎯 全球直连"],
       "include-all": true
     },
     {
-      ...groupBaseOption,
       "name": "🎯 全球直连",
       "type": "select",
       "proxies": ["DIRECT", "🚀 节点选择", "♻️ 自动选择", "🚀 手动切换"],
       "include-all": true
     },
     {
-      ...groupBaseOption,
       "name": "🛑 广告拦截",
       "type": "select",
       "proxies": ["REJECT", "DIRECT"]
     },
      {
-      ...groupBaseOption,
       "name": "🍃 应用净化",
       "type": "select",
       "proxies": ["REJECT", "DIRECT"]
     },
     {
-      ...groupBaseOption,
       "name": "🐟 漏网之鱼",
       "type": "select",
       "proxies": ["🚀 节点选择", "♻️ 自动选择", "🚀 手动切换", "🎯 全球直连"],
