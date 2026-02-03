@@ -1,11 +1,3 @@
-// 国内DNS服务器
-const domesticNameservers = [
- "1.2.4.8","210.2.4.8","101.6.6.6","223.5.5.5", "119.29.29.29"
-];
-// 国外DNS服务器
-const foreignNameservers = [
- "1.1.1.1",  "1.0.0.1",  "8.8.8.8"
-];
 // DNS配置
 const dnsConfig = {
   "enable": true,
