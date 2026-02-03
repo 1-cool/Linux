@@ -1,48 +1,50 @@
 // 国内DNS服务器
-// const domesticNameservers = [
-//  "https://dns.alidns.com/dns-query", // 阿里云公共DNS
-//  "https://doh.pub/dns-query", // 腾讯DNSPod
-//  "https://doh.360.cn/dns-query" // 360安全DNS
-// ];
+const domesticNameservers = [
+ "https://dns.alidns.com/dns-query", // 阿里云公共DNS
+ "https://doh.pub/dns-query", // 腾讯DNSPod
+ "https://doh.360.cn/dns-query" // 360安全DNS
+];
 // 国外DNS服务器
-// const foreignNameservers = [
-//  "https://1.1.1.1/dns-query", // Cloudflare(主)
-//  "https://1.0.0.1/dns-query", // Cloudflare(备)
-//  "https://208.67.222.222/dns-query", // OpenDNS(主)
-//  "https://208.67.220.220/dns-query", // OpenDNS(备)
-//  "https://194.242.2.2/dns-query", // Mullvad(主)
-//  "https://194.242.2.3/dns-query" // Mullvad(备)
-// ];
+const foreignNameservers = [
+ "https://1.1.1.1/dns-query", // Cloudflare(主)
+ "https://1.0.0.1/dns-query", // Cloudflare(备)
+ "https://208.67.222.222/dns-query", // OpenDNS(主)
+ "https://208.67.220.220/dns-query", // OpenDNS(备)
+ "https://194.242.2.2/dns-query", // Mullvad(主)
+ "https://194.242.2.3/dns-query" // Mullvad(备)
+];
 // DNS配置
-// const dnsConfig = {
-//   "enable": true,
-//   "listen": "0.0.0.0:1053",
-//   "ipv6": true,
-//   "use-system-hosts": false,
-//   "cache-algorithm": "arc",
-//   "enhanced-mode": "fake-ip",
-//   "fake-ip-range": "198.18.0.1/16",
-//   "fake-ip-filter": [
-//     // 本地主机/设备
-//     "+.lan",
-//     "+.local",
-//     // Windows网络出现小地球图标
-//     "+.msftconnecttest.com",
-//     "+.msftncsi.com",
-//     // QQ快速登录检测失败
-//     "localhost.ptlogin2.qq.com",
-//     "localhost.sec.qq.com",
-//     // 微信快速登录检测失败
-//     "localhost.work.weixin.qq.com"
-//   ],
-//   "default-nameserver": ["223.5.5.5", "119.29.29.29", "1.1.1.1", "8.8.8.8"],
-//   "nameserver": [...domesticNameservers, ...foreignNameservers],
-//   "proxy-server-nameserver": [...domesticNameservers, ...foreignNameservers],
-//   "nameserver-policy": {
-//     "geosite:private,cn,geolocation-cn": domesticNameservers,
-//     "geosite:google,youtube,telegram,gfw,geolocation-!cn": foreignNameservers
-//   }
-// };
+const dnsConfig = {
+  "enable": true,
+  "listen": "0.0.0.0:1053",
+  "ipv6": true,
+  "use-system-hosts": false,
+  "cache-algorithm": "arc",
+  "enhanced-mode": "fake-ip",
+  "fake-ip-range": "198.18.0.1/16",
+  "fake-ip-filter": [
+    // 本地主机/设备
+    "+.lan",
+    "+.local",
+    // Windows网络出现小地球图标
+    "+.msftconnecttest.com",
+    "+.msftncsi.com",
+    // QQ快速登录检测失败
+    "localhost.ptlogin2.qq.com",
+    "localhost.sec.qq.com",
+    // 微信快速登录检测失败
+    "localhost.work.weixin.qq.com",
+    "*.localhost"
+  ],
+  "fake-ip-filter-mode": "blacklist",
+  "default-nameserver": ["1.2.4.8","210.2.4.8","101.6.6.6","223.5.5.5", "119.29.29.29", "1.1.1.1", "8.8.8.8"],
+  "nameserver": [...domesticNameservers, ...foreignNameservers],
+  "proxy-server-nameserver": [...domesticNameservers, ...foreignNameservers],
+  "nameserver-policy": {
+    "geosite:private,cn,geolocation-cn": domesticNameservers,
+    "geosite:google,youtube,telegram,gfw,geolocation-!cn": foreignNameservers
+  }
+};
 // 规则
 const rules = [
   // 自定义规则
@@ -10467,7 +10469,7 @@ function main(config) {
   }
 
   // 覆盖原配置中DNS配置
-  // config["dns"] = dnsConfig;
+  config["dns"] = dnsConfig;
 
   // 覆盖原配置中的代理组
   config["proxy-groups"] = [
@@ -10532,21 +10534,21 @@ function main(config) {
       // ...groupBaseOption,
       "name": "🎥 奈飞视频",
       "type": "select",
-      "proxies": ["🎯 全球直连", "🚀 节点选择", "♻️ 自动选择", "🚀 手动切换"],
+      "proxies": ["🚀 节点选择", "🎯 全球直连", "♻️ 自动选择", "🚀 手动切换"],
       "include-all": true
     },
     {
       // ...groupBaseOption,
       "name": "📺 巴哈姆特",
       "type": "select",
-      "proxies": ["🎯 全球直连", "🚀 节点选择", "♻️ 自动选择", "🚀 手动切换"],
+      "proxies": ["🚀 节点选择", "🎯 全球直连", "♻️ 自动选择", "🚀 手动切换"],
       "include-all": true
     },
     {
       // ...groupBaseOption,
       "name": "📺 哔哩哔哩",
       "type": "select",
-      "proxies": ["🚀 节点选择", "♻️ 自动选择", "🚀 手动切换", "🎯 全球直连"],
+      "proxies": ["🎯 全球直连", "🚀 节点选择", "♻️ 自动选择", "🚀 手动切换"],
       "include-all": true
     },
     {
@@ -10559,7 +10561,7 @@ function main(config) {
     {
       "name": "🌏 国内媒体",
       "type": "select",
-      "proxies": ["🚀 节点选择", "♻️ 自动选择", "🚀 手动切换", "🎯 全球直连"],
+      "proxies": ["🎯 全球直连", "🚀 节点选择", "♻️ 自动选择", "🚀 手动切换"],
       "include-all": true
     },
     {
@@ -10571,43 +10573,43 @@ function main(config) {
     {
       "name": "Ⓜ️ 微软Bing",
       "type": "select",
-      "proxies": ["🚀 节点选择", "♻️ 自动选择", "🚀 手动切换", "🎯 全球直连"],
+      "proxies": ["🎯 全球直连", "🚀 节点选择", "♻️ 自动选择", "🚀 手动切换"],
       "include-all": true
     },
     {
       "name": "Ⓜ️ 微软云盘",
       "type": "select",
-      "proxies": ["🚀 节点选择", "♻️ 自动选择", "🚀 手动切换", "🎯 全球直连"],
+      "proxies": ["🎯 全球直连", "🚀 节点选择", "♻️ 自动选择", "🚀 手动切换"],
       "include-all": true
     },
     {
       "name": "Ⓜ️ 微软服务",
       "type": "select",
-      "proxies": ["🚀 节点选择", "♻️ 自动选择", "🚀 手动切换", "🎯 全球直连"],
+      "proxies": ["🎯 全球直连", "🚀 节点选择", "♻️ 自动选择", "🚀 手动切换"],
       "include-all": true
     },
     {
       "name": "🍎 苹果服务",
       "type": "select",
-      "proxies": ["🚀 节点选择", "♻️ 自动选择", "🚀 手动切换", "🎯 全球直连"],
+      "proxies": ["🎯 全球直连", "🚀 节点选择", "♻️ 自动选择", "🚀 手动切换"],
       "include-all": true
     },
     {
       "name": "🎮 游戏平台",
       "type": "select",
-      "proxies": ["🚀 节点选择", "♻️ 自动选择", "🚀 手动切换", "🎯 全球直连"],
+      "proxies": ["🎯 全球直连", "🚀 节点选择", "♻️ 自动选择", "🚀 手动切换"],
       "include-all": true
     },
     {
       "name": "🎶 网易音乐",
       "type": "select",
-      "proxies": ["🚀 节点选择", "♻️ 自动选择", "🚀 手动切换", "🎯 全球直连"],
+      "proxies": ["🎯 全球直连", "🚀 节点选择", "♻️ 自动选择", "🚀 手动切换"],
       "include-all": true
     },
     {
       "name": "🎯 全球直连",
       "type": "select",
-      "proxies": ["DIRECT", "🚀 节点选择", "♻️ 自动选择"]
+      "proxies": ["DIRECT"]
     },
     {
       "name": "🛑 广告拦截",
@@ -10622,7 +10624,7 @@ function main(config) {
     {
       "name": "🐟 漏网之鱼",
       "type": "select",
-      "proxies": ["🚀 节点选择", "♻️ 自动选择", "🚀 手动切换", "🎯 全球直连"],
+      "proxies": ["🎯 全球直连", "🚀 节点选择", "♻️ 自动选择", "🚀 手动切换"],
       "include-all": true
     }
   ];
