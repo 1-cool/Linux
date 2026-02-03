@@ -10447,14 +10447,14 @@ const rules = [
   "MATCH,🐟 漏网之鱼"
 ];
 // 代理组通用配置
-const groupBaseOption = {
-  "interval": 300,
-  "timeout": 3000,
-  "url": "http://www.gstatic.com/generate_204",
-  "lazy": true,
-  "max-failed-times": 3,
-  "hidden": false
-};
+// const groupBaseOption = {
+//   "interval": 300,
+//   "timeout": 3000,
+//   "url": "http://www.gstatic.com/generate_204",
+//   "lazy": true,
+//   "max-failed-times": 3,
+//   "hidden": false
+// };
 
 // 程序入口
 function main(config) {
@@ -10466,26 +10466,28 @@ function main(config) {
   }
 
   // 覆盖原配置中DNS配置
-  //config["dns"] = dnsConfig;
+  config["dns"] = dnsConfig;
 
   // 覆盖原配置中的代理组
   config["proxy-groups"] = [
     {
-      ...groupBaseOption,
+      // ...groupBaseOption,
       "name": "🚀 节点选择",
       "type": "select",
       "proxies": ["♻️ 自动选择", "🚀 手动切换"],
       "include-all": true
     },
     {
-      ...groupBaseOption,
+      // ...groupBaseOption,
       "name": "♻️ 自动选择",
       "type": "url-test",
-      "tolerance": 100,
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": 300,
+      "tolerance": 50,
       "include-all": true
     },
     {
-      ...groupBaseOption,
+      // ...groupBaseOption,
       "name": "🚀 手动切换",
       "type": "fallback",
       "include-all": true
@@ -10505,49 +10507,49 @@ function main(config) {
     //   "include-all": true
     // },
     {
-      ...groupBaseOption,
+      // ...groupBaseOption,
       "name": "📲 电报消息",
       "type": "select",
       "proxies": ["🚀 节点选择", "♻️ 自动选择", "🚀 手动切换", "🎯 全球直连"],
       "include-all": true
     },
     {
-      ...groupBaseOption,
+      // ...groupBaseOption,
       "name": "💬 Ai平台",
       "type": "select",
       "proxies": ["🚀 节点选择", "♻️ 自动选择", "🚀 手动切换", "🎯 全球直连"],
       "include-all": true
     },
     {
-      ...groupBaseOption,
+      // ...groupBaseOption,
       "name": "📹 油管视频",
       "type": "select",
       "proxies": ["🚀 节点选择", "♻️ 自动选择", "🚀 手动切换", "🎯 全球直连"],
       "include-all": true
     },
     {
-      ...groupBaseOption,
+      // ...groupBaseOption,
       "name": "🎥 奈飞视频",
       "type": "select",
       "proxies": ["🎯 全球直连", "🚀 节点选择", "♻️ 自动选择", "🚀 手动切换"],
       "include-all": true
     },
     {
-      ...groupBaseOption,
+      // ...groupBaseOption,
       "name": "📺 巴哈姆特",
       "type": "select",
       "proxies": ["🎯 全球直连", "🚀 节点选择", "♻️ 自动选择", "🚀 手动切换"],
       "include-all": true
     },
     {
-      ...groupBaseOption,
+      // ...groupBaseOption,
       "name": "📺 哔哩哔哩",
       "type": "select",
       "proxies": ["🚀 节点选择", "♻️ 自动选择", "🚀 手动切换", "🎯 全球直连"],
       "include-all": true
     },
     {
-      ...groupBaseOption,
+      // ...groupBaseOption,
       "name": "🌍 国外媒体",
       "type": "select",
       "proxies": ["🚀 节点选择", "♻️ 自动选择", "🚀 手动切换", "🎯 全球直连"],
@@ -10604,8 +10606,7 @@ function main(config) {
     {
       "name": "🎯 全球直连",
       "type": "select",
-      "proxies": ["DIRECT", "🚀 节点选择", "♻️ 自动选择", "🚀 手动切换"],
-      "include-all": true
+      "proxies": ["DIRECT", "🚀 节点选择", "♻️ 自动选择"]
     },
     {
       "name": "🛑 广告拦截",
