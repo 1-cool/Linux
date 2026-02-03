@@ -46,7 +46,13 @@ const dnsConfig = {
 };
 // 规则
 const rules = [
-  // 自定义规则
+  //自定义规则
+  "DOMAIN-SUFFIX,clashverge.dev,🚀 节点选择",
+
+
+
+  
+  // ACL4SSR_Online_FULL规则
   "DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连",
   "DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连",
   "DOMAIN-SUFFIX,ip6-loopback,🎯 全球直连",
@@ -9586,7 +9592,6 @@ const rules = [
   "DOMAIN-SUFFIX,ocnttv.com,🚀 节点选择",
   "DOMAIN-SUFFIX,vikacg.com,🚀 节点选择",
   "DOMAIN-SUFFIX,picjs.xyz,🚀 节点选择",
-  "DOMAIN-SUFFIX,clashverge.dev,🚀 节点选择",
   "DOMAIN-SUFFIX,13th.tech,🎯 全球直连",
   "DOMAIN-SUFFIX,423down.com,🎯 全球直连",
   "DOMAIN-SUFFIX,bokecc.com,🎯 全球直连",
@@ -10634,4 +10639,5 @@ function main(config) {
 
   // 返回修改后的配置
   return config;
+
 }
