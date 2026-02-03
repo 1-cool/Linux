@@ -4,9 +4,7 @@ const domesticNameservers = [
 ];
 // 国外DNS服务器
 const foreignNameservers = [
- "1.1.1.1", // Cloudflare(主)
- "1.0.0.1", // Cloudflare(备)
- "8.8.8.8"
+ "1.1.1.1",  "1.0.0.1",  "8.8.8.8"
 ];
 // DNS配置
 const dnsConfig = {
@@ -44,11 +42,14 @@ const dnsConfig = {
   ],
   "fake-ip-filter-mode": "blacklist",
   "default-nameserver": ["1.2.4.8","210.2.4.8","101.6.6.6","223.5.5.5", "119.29.29.29", "1.1.1.1", "8.8.8.8"],
-  "nameserver": [...domesticNameservers, ...foreignNameservers],
-  "proxy-server-nameserver": [...domesticNameservers, ...foreignNameservers],
-  "nameserver-policy": {
-    "geosite:private,cn,geolocation-cn": domesticNameservers,
-    "geosite:google,youtube,telegram,gfw,geolocation-!cn": foreignNameservers
+  "nameserver": ["1.2.4.8","210.2.4.8","101.6.6.6","223.5.5.5", "119.29.29.29"],
+  "fallback":["1.1.1.1",  "1.0.0.1",  "8.8.8.8", "tls://1.0.0.1:853", "tls://dns.google:853"],
+  "fallback-filter":{
+    "geoip": true,
+    "geoip-code": "CN",
+    "ipcidr": [],
+    "domain": null,
+    "geosite": []
   }
 };
 // 规则
