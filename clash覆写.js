@@ -50,6 +50,8 @@ const rules = [
   "DOMAIN-SUFFIX,clashverge.dev,🚀 节点选择",
   "DOMAIN-SUFFIX,zangyun.xyz,🎯 全球直连",
   "DOMAIN-SUFFIX,arena.ai,🚀 节点选择",
+  "DOMAIN-SUFFIX,styleai.art,🚀 节点选择",
+  "DOMAIN-SUFFIX,rutracker.org,🚀 节点选择",
 
 
 
