@@ -48,7 +48,7 @@ const dnsConfig = {
 const rules = [
   //自定义规则
   "DOMAIN-SUFFIX,clashverge.dev,🚀 节点选择",
-  "zangyun.xyz,🎯 全球直连",
+  "DOMAIN-SUFFIX,zangyun.xyz,🎯 全球直连",
 
 
 
@@ -10642,4 +10642,5 @@ function main(config) {
   return config;
 
 }
+
 
