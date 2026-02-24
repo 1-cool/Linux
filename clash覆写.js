@@ -52,6 +52,8 @@ const rules = [
   "DOMAIN-SUFFIX,arena.ai,🚀 节点选择",
   "DOMAIN-SUFFIX,styleai.art,🚀 节点选择",
   "DOMAIN-SUFFIX,rutracker.org,🚀 节点选择",
+  "DOMAIN-SUFFIX,bitwarden.com,🎯 全球直连",
+  "DOMAIN-SUFFIX,bitwarden.net,🎯 全球直连",
 
 
 
@@ -10645,6 +10647,7 @@ function main(config) {
   return config;
 
 }
+
 
 
 
