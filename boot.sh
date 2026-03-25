@@ -16,3 +16,9 @@ curl -fsSL https://raw.githubusercontent.com/1-cool/Linux/refs/heads/master/fail
 # 安装谷歌浏览器
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 apt install -y ./google-chrome-stable_current_amd64.deb
+
+# 下载.vimrc
+wget -O ~/.vimrc https://raw.githubusercontent.com/1-cool/Linux-config/refs/heads/master/.vimrc
+mkdri -p $HOME/.vim/backup/
+mkdri -p $HOME/.vim/swap/
+mkdri -p $HOME/.vim/undo/
