@@ -19,6 +19,6 @@ apt install -y ./google-chrome-stable_current_amd64.deb
 
 # 下载.vimrc
 wget -O ~/.vimrc https://raw.githubusercontent.com/1-cool/Linux-config/refs/heads/master/.vimrc
-mkdri -p $HOME/.vim/backup/
-mkdri -p $HOME/.vim/swap/
-mkdri -p $HOME/.vim/undo/
+mkdir -p $HOME/.vim/backup/
+mkdir -p $HOME/.vim/swap/
+mkdir -p $HOME/.vim/undo/
