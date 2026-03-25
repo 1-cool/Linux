@@ -10,4 +10,5 @@
 * `ssh-port.sh`  更改SSH端口脚本，魔改为更改SSH端口为2233  
 * `ssh-safe.sh`  加固SSH的安全  
 * `tcpdump.sh`  使用tcpdump后台抓包的守护  
-* `updatelink.sh`  自动从服务器更新连接脚本  
+* `updatelink.sh`  自动从服务器更新连接脚本
+* `install-zsh`  安装zsh和oh-my-zsh  
