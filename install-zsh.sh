@@ -4,7 +4,7 @@
 ######################################################################################################
 
 # 安装 zsh git curl
-apt install zsh git curl -y
+apt update && apt install zsh git curl -y
 
 #安装 oh-my-zsh
 bash <(curl -fsSL https://gh-proxy.org/https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh）
