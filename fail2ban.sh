@@ -4,7 +4,7 @@
 ######################################################################################################
 
 #安装fail2ban
-apt install -y fail2ban
+apt update && apt install -y fail2ban
 
 #写入配置
 tee /etc/fail2ban/jail.local > /dev/null << 'EOF'
